@@ -1,6 +1,3 @@
-# Requirements :
-# 
-
 # Install zsh
 brew install zsh || apt install zsh || apt-get install zsh || yum install zsh
 
@@ -12,7 +9,9 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
 
 # Install fonts
-cp -rf .fonts ~/
+mkdir -p ~/.local/share/fonts && cp -rf .fonts/* ~/.local/share/fonts
+brew install fontconfig || apt install fontconfig || apt-get install fontconfig || yum install fontconfig
+fc-cache -f -v
 
 # Overwrite dotfiles
 cp -rf .zshrc ~/
