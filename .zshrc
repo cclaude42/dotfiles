@@ -107,7 +107,7 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias python="python3"
-alias dockerwipe="docker kill $(docker ps -aq) && docker rm $(docker ps -aq) ; docker rmi $(docker images -q) ; docker system prune -af"
+alias dockerwipe='docker kill $(docker ps -aq) && docker rm $(docker ps -aq) ; docker rmi $(docker images -q) ; docker system prune -af'
 
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
