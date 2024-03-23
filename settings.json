@@ -1,5 +1,11 @@
 {
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
+    "git.confirmSync": false,
+    "git.suggestSmartCommit": false,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    "workbench.colorTheme": "Monokai Pro",
+    "workbench.iconTheme": "Monokai Pro Icons"
     "terminal.integrated.fontFamily": "MesloLGS NF",
 }
