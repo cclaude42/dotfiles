@@ -10,9 +10,9 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zsh-autosuggestions
 
 # Install fonts
-mkdir -p ~/.fonts && cp -rf .fonts/* ~/.fonts
+cp -rf .fonts/* ~/Library/Fonts/ || mkdir -p ~/.fonts && cp -rf .fonts/* ~/.fonts
 brew install fontconfig || apt install fontconfig || apt-get install fontconfig || yum install fontconfig
-fc-cache -f -v
+fc-cache -f -v  || echo
 
 # Install powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
