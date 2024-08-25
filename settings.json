@@ -6,6 +6,6 @@
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 1000,
     "workbench.colorTheme": "Monokai Pro",
-    "workbench.iconTheme": "Monokai Pro Icons"
+    "workbench.iconTheme": "Monokai Pro Icons",
     "terminal.integrated.fontFamily": "MesloLGS NF",
 }
