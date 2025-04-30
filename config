@@ -1,0 +1,18 @@
+[default]
+region = eu-west-1
+
+[profile dev]
+sso_session = company-sso
+sso_account_id = ACCOUNT_NUMBER
+sso_role_name = AWSAdministratorAccess
+
+[profile prod]
+sso_session = company-sso
+sso_account_id = ACCOUNT_NUMBER
+sso_role_name = ReadOnlyAccess
+region = us-east-2
+
+[sso-session company-sso]
+sso_start_url = https://company-link.awsapps.com/start/#
+sso_region = eu-west-1
+sso_registration_scopes = sso:account:access
