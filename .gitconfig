@@ -2,6 +2,10 @@
 [user]
 	name = César Claude
 	email = cesarclaudepro@gmail.com
+	signingkey = /Users/cesar/.ssh/signing.pub
+
+[gpg]
+	format = ssh
 
 [includeIf "gitdir:~/workspace/perso/"]
   path = ~/.gitconfig-perso
