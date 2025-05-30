@@ -2,6 +2,8 @@
 
 My personal config for a zen and productive config
 
+![Terminal Screenshot](screen.png)
+
 ## Stack
 
 - **Browser**: [Zen Browser](https://zen-browser.app/)
