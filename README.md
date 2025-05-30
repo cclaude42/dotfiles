@@ -35,7 +35,7 @@ My personal config for a zen and productive workflow
 
 2. Manually install required packages, setup the apps and copy the dotfiles where they need to go.
 
-Alternatively : run the initialization script (experimental) :
+Alternatively, run the initialization script (experimental) :
    ```
    cd ~/.dotfiles
    bash .init.sh
