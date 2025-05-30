@@ -19,7 +19,8 @@ alias ll="eza --icons --group-directories-first -lah"
 alias cat="bat"
 alias cd="z"
 
-alias python="python3"alias pip="uv pip"
+alias python="python3"
+alias pip="uv pip"
 alias uvi="uv pip install -U"
 
 alias gb="git brunch"
