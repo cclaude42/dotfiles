@@ -1,6 +1,6 @@
 # Dotfiles
 
-My personal config for a zen and productive config
+My personal config for a zen and productive workflow
 
 ![Terminal Screenshot](screen.png)
 
@@ -33,11 +33,14 @@ My personal config for a zen and productive config
    git clone https://github.com/cclaude42/dotfiles.git ~/.dotfiles
    ```
 
-2. Run the initialization script:
+2. Manually install required packages, setup the apps and copy the dotfiles where they need to go.
+
+Alternatively : run the initialization script (experimental) :
    ```
    cd ~/.dotfiles
    bash .init.sh
    ```
+
 
 ## Configuration Files
 
