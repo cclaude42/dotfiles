@@ -25,19 +25,23 @@ alias uvi="uv pip install -U"
 
 alias gb="git brunch"
 alias gn="git checkout -b"
+alias ga="git add ."
 alias gc="git commit -S -m"
-alias gpp="git push --set-upstream origin $(git branch --show-current)"
-alias gpr="gh pr create --fill -r KonvuTeam/engineers"
 alias gpl="git pull"
-alias gprk="git push --set-upstream origin $(git branch --show-current) && gh pr create --fill -r KonvuTeam/engineers --head $(git branch --show-current) | grep -o 'https://github.com/[^/]*/[^/]*/pull/[0-9]*' | xargs open"
 
 alias config="cursor ~/.zshrc"
 alias dockerwipe='docker kill $(docker ps -aq) && docker rm $(docker ps -aq) ; docker rmi $(docker images -q) ; docker system prune -af'
 
 
 # commands
-xsp() {
-    asp "$1" && ksp "$1"
+gpp() {
+    git push --set-upstream origin $(git branch --show-current)
+}
+gprk() {
+    git push --set-upstream origin $(git branch --show-current) \
+    && gh pr create --fill -r KonvuTeam/engineers --head $(git branch --show-current) \
+    | grep -o 'https://github.com/[^/]*/[^/]*/pull/[0-9]*' \
+    | xargs open
 }
 ksp() {
     if [ -z "$1" ]; then
@@ -45,6 +49,9 @@ ksp() {
     else
         export KUBECONTEXT="$1" && kubectx "$1" > /dev/null 2>&1
     fi
+}
+xsp() {
+    asp "$1" && ksp "$1"
 }
 
 # pyenv
