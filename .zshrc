@@ -40,6 +40,7 @@ gpp() {
 gprk() {
     git push --set-upstream origin $(git branch --show-current) \
     && gh pr create --fill -r KonvuTeam/engineers --head $(git branch --show-current) \
+    | tee /dev/tty \
     | grep -o 'https://github.com/[^/]*/[^/]*/pull/[0-9]*' \
     | xargs open
 }
