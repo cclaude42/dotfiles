@@ -38,8 +38,11 @@ gpp() {
     git push --set-upstream origin $(git branch --show-current)
 }
 gprk() {
-    git push --set-upstream origin $(git branch --show-current) \
-    && gh pr create --fill -r KonvuTeam/engineers --head $(git branch --show-current) \
+    BRANCH=$(git branch --show-current) # get current branch name
+    TITLE=$(echo $BRANCH | sed s=-=\ =g | sed s=feature/kon\ =KON-=g) # format 'feature/kon 123' => 'KON-123'
+    REVIEWERS="KonvuTeam/engineers" # your reviewers
+    git push --set-upstream origin $BRANCH \
+    && gh pr create --fill -r $REVIEWERS --head $BRANCH --title $TITLE \
     | tee /dev/tty \
     | grep -o 'https://github.com/[^/]*/[^/]*/pull/[0-9]*' \
     | xargs open
